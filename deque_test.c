@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "deque.h"
+
+void deque_print (struct deque *d)
+{
+    struct nodo *aux;
+    int dado, i;
+
+    if (deque_empty (d))
+    {
+        printf ("Deque vazio/n");
+        return;
+    }
+
+    aux = d->str;
+
+    for (i = 0; i < deque_size (d); i++)
+    {
+        dado = aux->data;
+        printf ("Dado %d: %d\n", i, dado);
+    }
+
+    printf ("Tamanho do deque: %d\n", deque_size (d));
+
+    return;
+}
+
+int main ()
+{
+    struct deque *d;
+    int dado;
+
+    printf ("Teste 1: criar deque e ver se esta vazio\n");
+    d = deque_make ();
+    deque_print (d);
+    printf ("/n/n");
+
+    /*
+    printf ("Teste 2: inserir 3 elementos no comeco/n");
+    push_front (d, 1);
+    push_front (d, 2);
+    push_front (d, 3);
+    deque_print (d);
+    printf ("/n/n");
+
+
+    printf ("Teste 3: remover 3 elementos do inicio");
+    dado = pop_front (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_front (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_front (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_front (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    printf ("/n/n");
+
+
+    printf ("Teste 4: inserir 3 elementos no final");
+    push_back (d, 3);
+    push_back (d, 2);
+    push_back (d, 1);
+    deque_print (d);
+    printf ("/n/n");
+
+
+    printf ("Teste 5: remover 3 elementos do final");
+    dado = pop_back (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_back (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_back (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    dado = pop_back (d);
+    printf ("%d/n", dado);
+    deque_print (d);
+    printf ("/n/n");
+
+
+    push_front (d, 1);
+    push_front (d, 2);
+    push_front (d, 3);
+
+
+    printf ("Teste 6: ver elemento do comeco/n");
+    dado = peek_front (d);
+    printf ("%d/n");
+    printf ("/n/n");
+
+
+    printf ("Teste 7: ver elemento do final/n");
+    dado = peek_back (d);
+    printf ("%d/n", dado);
+    printf ("/n/n");
+
+    
+    printf ("Teste 8: destruir deque/n");
+    deque_destroy (*d);
+    */
+
+    return 0;
+}
