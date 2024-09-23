@@ -31,10 +31,10 @@ int peek_front (struct deque *deque, int dado);
 int peek_back (struct deque *deque, int dado);
 
 //Retira dado do inicio do deque
-int pop_front (struct deque *deque, int dado);
+int pop_front (struct deque *deque);
 
 //Retira dado do fim do deque
-int pop_back (struct deque *deque, int dado);
+int pop_back (struct deque *deque);
 
 //Retorna 1 se deque vazio, no caso contrario
 char deque_empty (struct deque *deque);
