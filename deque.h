@@ -25,10 +25,10 @@ void push_front (struct deque *deque, int dado);
 void push_back (struct deque *deque, int dado);
 
 //Retorna dado que esta no inicio do deque
-int peek_front (struct deque *deque, int dado);
+int peek_front (struct deque *deque);
 
 //Retorna dado que esta no fim do deque
-int peek_back (struct deque *deque, int dado);
+int peek_back (struct deque *deque);
 
 //Retira dado do inicio do deque
 int pop_front (struct deque *deque);
