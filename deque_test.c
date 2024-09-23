@@ -5,23 +5,23 @@
 void deque_print (struct deque *d)
 {
     struct nodo *aux;
-    int dado, i;
+    /*int dado, i;*/
 
     if (deque_empty (d))
     {
-        printf ("Deque vazio/n");
+        printf ("Deque vazio\n");
         return;
     }
 
     aux = d->str;
 
-    for (i = 0; i < deque_size (d); i++)
+    while (aux != NULL)
     {
-        dado = aux->data;
-        printf ("Dado %d: %d\n", i, dado);
+        printf ("%d ", aux->data);
+        aux = aux->next;
     }
 
-    printf ("Tamanho do deque: %d\n", deque_size (d));
+    printf ("\nTamanho do deque: %d\n", deque_size (d));
 
     return;
 }
@@ -34,33 +34,33 @@ int main ()
     printf ("Teste 1: criar deque e ver se esta vazio\n");
     d = deque_make ();
     deque_print (d);
-    printf ("/n/n");
+    printf ("\n\n");
 
-    /*
-    printf ("Teste 2: inserir 3 elementos no comeco/n");
+    
+    printf ("Teste 2: inserir 3 elementos no comeco\n");
     push_front (d, 1);
     push_front (d, 2);
     push_front (d, 3);
     deque_print (d);
-    printf ("/n/n");
+    printf ("\n\n");
 
-
-    printf ("Teste 3: remover 3 elementos do inicio");
+    
+    printf ("Teste 3: remover 3 elementos do inicio\n");
     dado = pop_front (d);
-    printf ("%d/n", dado);
+    printf ("Removido: %d\n", dado);
     deque_print (d);
     dado = pop_front (d);
-    printf ("%d/n", dado);
+    printf ("Removido: %d\n", dado);
     deque_print (d);
     dado = pop_front (d);
-    printf ("%d/n", dado);
+    printf ("Removido: %d\n", dado);
     deque_print (d);
     dado = pop_front (d);
-    printf ("%d/n", dado);
+    printf ("Removido: %d\n", dado);
     deque_print (d);
-    printf ("/n/n");
+    printf ("\n\n");
 
-
+    /*
     printf ("Teste 4: inserir 3 elementos no final");
     push_back (d, 3);
     push_back (d, 2);
