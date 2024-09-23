@@ -60,51 +60,54 @@ int main ()
     deque_print (d);
     printf ("\n\n");
 
-    /*
-    printf ("Teste 4: inserir 3 elementos no final");
-    push_back (d, 3);
-    push_back (d, 2);
+
+    printf ("Teste 4: inserir 3 elementos no final\n");
     push_back (d, 1);
+    push_back (d, 2);
+    push_back (d, 3);
     deque_print (d);
-    printf ("/n/n");
+    printf ("\n\n");
 
-
-    printf ("Teste 5: remover 3 elementos do final");
+    
+    printf ("Teste 5: remover 3 elementos do final\n");
     dado = pop_back (d);
-    printf ("%d/n", dado);
-    deque_print (d);
-    dado = pop_back (d);
-    printf ("%d/n", dado);
-    deque_print (d);
-    dado = pop_back (d);
-    printf ("%d/n", dado);
+    printf ("%d\n", dado);
     deque_print (d);
     dado = pop_back (d);
-    printf ("%d/n", dado);
+    printf ("%d\n", dado);
     deque_print (d);
-    printf ("/n/n");
+    dado = pop_back (d);
+    printf ("%d\n", dado);
+    deque_print (d);
+    dado = pop_back (d);
+    printf ("%d\n", dado);
+    deque_print (d);
+    printf ("\n\n");
 
-
+    
     push_front (d, 1);
     push_front (d, 2);
     push_front (d, 3);
-
-
-    printf ("Teste 6: ver elemento do comeco/n");
-    dado = peek_front (d);
-    printf ("%d/n");
-    printf ("/n/n");
-
-
-    printf ("Teste 7: ver elemento do final/n");
-    dado = peek_back (d);
-    printf ("%d/n", dado);
-    printf ("/n/n");
+    printf ("Deque atual: ");
+    deque_print (d);
+    printf ("\n");
 
     
-    printf ("Teste 8: destruir deque/n");
-    deque_destroy (*d);
-    */
+    printf ("Teste 6: ver elemento do comeco\n");
+    dado = peek_front (d);
+    printf ("%d\n", dado);
+    printf ("\n\n");
+
+
+    printf ("Teste 7: ver elemento do final\n");
+    dado = peek_back (d);
+    printf ("%d\n", dado);
+    printf ("\n\n");
+
+    
+    printf ("Teste 8: destruir deque\n");
+    deque_destroy (&d);
+    
 
     return 0;
 }
