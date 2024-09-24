@@ -113,10 +113,10 @@ void push_back (struct deque *d, int dado)
 
         return;
     }
-
+ 
     d->end->next = new;
     new->prev = d->end;
-    d->end = new;
+    d->end = d->end->next;
     (d->size)++;
 
     return;
@@ -134,8 +134,11 @@ int pop_back (struct deque *d)
     }
 
     aux = d->end;
+    //printf ("d->end: %d\n", d->end->data);
     dado = aux->data;
+    //printf ("aux->data: %d\n", dado);
     d->end = d->end->prev;
+    //printf ("d->end->prev: %d\n", d->end->prev->data);
     (d->size)--;
 
     free (aux);
