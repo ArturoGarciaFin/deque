@@ -5,7 +5,6 @@
 void deque_print (struct deque *d)
 {
     struct nodo *aux;
-    /*int dado, i;*/
 
     if (deque_empty (d))
     {
@@ -39,7 +38,9 @@ int main ()
     
     printf ("Teste 2: inserir 3 elementos no comeco\n");
     push_front (d, 1);
+    deque_print (d);
     push_front (d, 2);
+    deque_print (d);
     push_front (d, 3);
     deque_print (d);
     printf ("\n\n");
@@ -63,7 +64,9 @@ int main ()
 
     printf ("Teste 4: inserir 3 elementos no final\n");
     push_back (d, 1);
+    deque_print (d);
     push_back (d, 2);
+    deque_print (d);
     push_back (d, 3);
     deque_print (d);
     printf ("\n\n");
