@@ -139,6 +139,7 @@ int pop_back (struct deque *d)
     //printf ("aux->data: %d\n", dado);
     d->end = d->end->prev;
     //printf ("d->end->prev: %d\n", d->end->prev->data);
+    d->end->next = NULL;
     (d->size)--;
 
     free (aux);
