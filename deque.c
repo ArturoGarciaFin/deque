@@ -65,7 +65,7 @@ int pop_front (struct deque *d)
 
     if (deque_empty(d))
     {
-        printf ("Falha: deque vazio\n");
+        printf ("Deque empty\n");
         return 0;
     }
 
@@ -129,7 +129,7 @@ int pop_back (struct deque *d)
 
     if (deque_empty(d))
     {
-        printf ("Falha: deque vazio\n");
+        printf ("Deque empty\n");
         return 0;
     }
 
@@ -163,7 +163,7 @@ int peek_front (struct deque *d)
 {
     if (deque_empty(d))
     {
-        printf ("Falha: deque vazio");
+        printf ("Deque empty\n");
         return 0;
     }
 
@@ -174,7 +174,7 @@ int peek_back (struct deque *d)
 {
     if (deque_empty(d))
     {
-        printf ("Falha: deque vazio");
+        printf ("Deque empty\n");
         return 0;
     }
     
@@ -208,4 +208,27 @@ char deque_empty (struct deque *d)
 int deque_size (struct deque *d)
 {
     return d->size;
+}
+
+void deque_print (struct deque *d)
+{
+    struct nodo *aux;
+
+    if (deque_empty (d))
+    {
+        printf ("Deque empty\n");
+        return;
+    }
+
+    aux = d->str;
+
+    while (aux != NULL)
+    {
+        printf ("%d ", aux->data);
+        aux = aux->next;
+    }
+
+    printf ("\nDeque size: %d\n", deque_size (d));
+
+    return;
 }

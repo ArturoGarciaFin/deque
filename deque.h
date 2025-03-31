@@ -41,3 +41,5 @@ char deque_empty (struct deque *deque);
 
 //Retorna tamanho do deque
 int deque_size (struct deque *deque);
+
+void deque_print (struct deque *deque);
