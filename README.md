@@ -1,3 +1,3 @@
 # Deque
 
-Estrutura de dados Deque
+Implementation of deque data structure.
